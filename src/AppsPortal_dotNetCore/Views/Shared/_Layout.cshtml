@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>The World - @ViewBag.Title</title>
+    <meta charset="utf-8" />
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    @*<link href="~/lib/bootswatch/yeti/bootstrap.min.css" rel="stylesheet" type="text/css"/>*@
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    @*<link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />*@
+    <link href="~/css/portal.css" rel='stylesheet' type='text/css' />
+
+
+</head>
+<body>
+    <header>
+        <nav role="navigation" class="navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+                @*<a class="navbar-brand">AppsPortal</a>*@
+            </div>
+            <div class="collapse navbar-collapse" id="nav-collapse">
+                <ul class="nav navbar-nav" id="main-nav">
+                    <li><a asp-controller="App" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="App" asp-action="Download">Downloads</a></li>
+                    <li><a asp-controller="App" asp-action="Documentation">Documentation</a></li>
+                    <li><a asp-controller="App" asp-action="About">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="flex-content">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <a href="#" class="circle"> </a>
+        <div class="flex-container" id="footer-content">
+            <div id="logo">
+                <img src="~/img/IDS_logo.png" id="logo-footer" />
+            </div>
+            <div class="footer-text">
+                <h4>
+                    <small>International Design Services, Inc.</small>
+                    <br />
+                    APPS PORTAL
+                </h4>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    @*<script type="text/javascript" src="~/lib/foundation/js/foundation.min.js"></script>
+        <script>
+          $(document).foundation();
+        </script>*@
+
+    <environment names="Development">
+        <script type="text/javascript" src="~/js/site.js"></script>
+        <script type="text/javascript" src="~/js/scrollToTop.js"></script>
+    </environment>
+    <environment names="Production,Staging">
+        <script type="text/javascript" src="~/lib/_app/site.js"></script>
+        <script type="text/javascript" src="~/lib/_app/scrollToTop.js"></script>
+    </environment>
+
+    @RenderSection("Scripts", false)
+
+
+</body>
+
+</html>

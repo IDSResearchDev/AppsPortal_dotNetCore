@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<AppsPortal_dotNetCore.Model.Product>
+
+<div class="feature-flex-container flex-column content-body">
+
+
+    @foreach (var product in Model)
+    {
+
+        <section class="feature-content-header">
+            <h2 class="text-uppercase text-center">@product.Name</h2>
+        </section>
+        <section class="feature-content-body flex-container flex-row" id="con">
+            <div class="feature-item1 flex-container flex-column">
+                <div id="item1-sub1" class="video-container">
+                    <!-- class="video-container" -->
+                    <iframe width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/E5ln4uR4TwQ"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                </div>
+                @*<div id="item2-sub2" ng-repeat="items in projects.Compatibility">
+                        <p>Compatibility: TeklaStructure {{items.TeklaStructure}} | Windows {{items.Windows}}</p>
+                    </div>*@
+            </div>
+            <div class="feature-item2 flex-container flex-column" id="apple">
+                <div id="item2-sub1">
+                    <p>@product.Description</p>
+                </div>
+                <div id="item2-sub2" class="flex-container flex-row">
+                    <div id="feedback">
+                        <p>Downloads: 1,000,000 | Feedback: 100</p>
+                    </div>
+                    <div>
+                        <a href="" class="btn btn-success"> Learn more </a>
+                        <a href="#myModal" class="btn btn-success" data-toggle="modal"> Download </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    }
+</div>

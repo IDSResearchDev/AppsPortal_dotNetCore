@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "ProductContextConnection": "Server=(localdb)\\MSSQLLocalDB;Database=AppsPortalCoreDb;Trusted_Connection=True;MultipleActiveResultSets=true;"
+  }
+}
