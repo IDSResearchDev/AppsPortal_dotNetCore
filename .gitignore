@@ -1,1 +1,3 @@
 src/AppsPortal_dotNetCore/obj/
+.vs/config/applicationhost.config
+*.suo
