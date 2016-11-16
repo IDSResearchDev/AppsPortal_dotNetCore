@@ -18,6 +18,14 @@ namespace AppsPortal_dotNetCore.Model
 
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductRelease> ProductReleases { get; set; }
+        
+        public DbSet<Apps> Apps { get; set; }
+        public DbSet<AppFeature> AppFeatures { get; set; }
+        public DbSet<AppDoc> AppDocs { get; set; }
+        public DbSet<Banner> Banners { get; set; }
+        public DbSet<Buttons> Buttons { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<Users> UserDetails { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

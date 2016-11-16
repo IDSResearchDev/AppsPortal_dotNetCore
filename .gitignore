@@ -1,3 +1,4 @@
 src/AppsPortal_dotNetCore/obj/
 .vs/config/applicationhost.config
 *.suo
+src/AppsPortal_dotNetCore/bin/Debug/
