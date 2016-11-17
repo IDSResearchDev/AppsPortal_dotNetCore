@@ -1,0 +1,7 @@
+{
+  "directory": "wwwroot/lib",
+  "https-proxy": "http://<user>:<pwd>@192.168.1.70:8080",
+  "proxy": "http://<user>:<pwd>@192.168.1.70:8080",
+  "registry": "http://bower.herokuapp.com",
+  "strict-ssl": false
+}
