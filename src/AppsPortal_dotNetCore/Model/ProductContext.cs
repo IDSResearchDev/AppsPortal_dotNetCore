@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace AppsPortal_dotNetCore.Model
+namespace AppsPortalCore.Model
 {
     public class ProductContext : DbContext
     {

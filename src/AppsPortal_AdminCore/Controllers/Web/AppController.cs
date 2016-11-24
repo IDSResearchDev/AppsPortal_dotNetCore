@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AppsPortal_AdminCore.Controllers.Web
+namespace AppsPortal.AdminCore.Controllers.Web
 {
     public class AppController : Controller
     {

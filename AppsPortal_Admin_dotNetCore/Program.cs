@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace AppsPortal_Admin_dotNetCore
+namespace AppsPortal.Admin.dotNetCore
 {
     public class Program
     {

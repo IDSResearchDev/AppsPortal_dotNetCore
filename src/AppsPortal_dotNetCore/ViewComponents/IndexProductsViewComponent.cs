@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AppsPortal_dotNetCore.Model;
+using AppsPortalCore.Model;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AppsPortal_dotNetCore.ViewComponents
+namespace AppsPortalCore.ViewComponents
 {
     public class IndexProductsViewComponent : ViewComponent
     {

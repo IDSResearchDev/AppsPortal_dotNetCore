@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace AppsPortal_Admin_dotNetCore
+namespace AppsPortal.Admin.dotNetCore
 {
     public class Startup
     {

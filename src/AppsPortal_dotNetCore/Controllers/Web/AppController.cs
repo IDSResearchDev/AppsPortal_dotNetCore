@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AppsPortal_dotNetCore.Model;
+using AppsPortalCore.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace AppsPortal_dotNetCore.Controllers.Web
+namespace AppsPortalCore.Controllers.Web
 {
     public class AppController : Controller
     {

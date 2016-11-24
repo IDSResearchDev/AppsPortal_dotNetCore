@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AppsPortal_dotNetCore.Model
+namespace AppsPortalCore.Model
 {
     public class Buttons
     {

@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using AppsPortal_dotNetCore.Model;
+using AppsPortalCore.Model;
 
-namespace AppsPortal_dotNetCore.Migrations
+namespace AppsPortalCore.Migrations
 {
     [DbContext(typeof(ProductContext))]
     partial class ProductContextModelSnapshot : ModelSnapshot

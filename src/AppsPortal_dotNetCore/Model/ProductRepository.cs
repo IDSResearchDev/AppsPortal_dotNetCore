@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace AppsPortal_dotNetCore.Model
+namespace AppsPortalCore.Model
 {
     public class ProductRepository : IProductRepository
     {

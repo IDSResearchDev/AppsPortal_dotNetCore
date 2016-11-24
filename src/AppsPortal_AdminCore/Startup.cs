@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 
-namespace AppsPortal_AdminCore
+namespace AppsPortal.AdminCore
 {
     public class Startup
     {

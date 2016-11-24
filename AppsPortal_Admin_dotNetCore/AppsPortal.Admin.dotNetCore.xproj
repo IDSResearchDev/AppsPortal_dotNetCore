@@ -6,8 +6,8 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>0bfbb4c1-3b91-418e-8ce9-b7be1a75acc9</ProjectGuid>
-    <RootNamespace>AppsPortal_dotNetCore</RootNamespace>
+    <ProjectGuid>f8471a1a-bed1-4a09-9eb8-7d25e4a85b7f</ProjectGuid>
+    <RootNamespace>AppsPortal.Admin.dotNetCore</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>

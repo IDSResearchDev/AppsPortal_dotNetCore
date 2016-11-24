@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AppsPortal_dotNetCore.Model
+namespace AppsPortalCore.Model
 {
     public interface IProductRepository
     {

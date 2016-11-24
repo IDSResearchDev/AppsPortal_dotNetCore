@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AppsPortal_dotNetCore.Model
+namespace AppsPortalCore.Model
 {
     public class ProductRelease
     {

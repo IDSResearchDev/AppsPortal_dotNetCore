@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace AppsPortal_dotNetCore.Migrations
+namespace AppsPortalCore.Migrations
 {
     public partial class initdb : Migration
     {
