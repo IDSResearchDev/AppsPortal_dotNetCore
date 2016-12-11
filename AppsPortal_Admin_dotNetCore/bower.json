@@ -12,9 +12,10 @@
     "morrisjs": "~0.5.1",
     "datatables-responsive": "1.0.6",
     "bootstrap-social": "~4.8.0",
-    "flot.tooltip": "~0.8.4"
-  },
-  "resolutions": {
-    "font-awesome": "~4.6.3"
+    "flot.tooltip": "~0.8.4",
+    "jquery": "*",
+    "angular": "~1.5.9",
+    "angular-route": "~1.5.9",
+    "underscore": "*"
   }
 }

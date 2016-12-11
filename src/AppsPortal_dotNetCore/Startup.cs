@@ -39,8 +39,8 @@ namespace AppsPortal.Core
             services.AddMvc();
 
             //Context
-            services.AddDbContext<ProductContext>();
-            services.AddTransient<ProductContextSeedData>();
+            services.AddDbContext<AppsContext>();
+            services.AddTransient<AppsContextSeedData>();
 
             //Repository
             services.AddScoped<IProductRepository, ProductRepository>();
@@ -48,7 +48,7 @@ namespace AppsPortal.Core
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory, ProductContextSeedData seeder)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory, AppsContextSeedData seeder)
         {
             //    loggerFactory.AddConsole();
 

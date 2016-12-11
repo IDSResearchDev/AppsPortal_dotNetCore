@@ -1,0 +1,64 @@
+﻿<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="/">Home</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>Apps</span>
+        </li>
+    </ul>
+</div>
+<!-- END PAGE BAR -->
+<div class="clearfix margin-bottom-20"> </div>
+
+<div class="portlet-body">
+    <h1 class="page-title">
+        Apps
+        <small></small>
+    </h1>
+    <div class="portlet light portlet-form" id="form_wizard_1">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="icon-list"></i>
+                <span class="caption-subject sbold">App Listing</span>
+            </div>
+            <div class="actions">
+                <button class="btn default green-stripe">
+                    <i class="fa fa-plus"></i>
+                    Add
+                </button>
+            </div>
+            
+        </div>
+
+        <table class="table table-striped table-bordered table-hover table-checkable order-column dataTable no-footer" id="sample_1" role="grid" aria-describedby="sample_1_info">
+            <thead class="">
+                <tr role="row">
+                    <th tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="Active : activate to sort column ascending" style="width: 50px;"></th>
+                    <th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="Application : activate to sort column ascending" style="width: 373px; text-align:center"> Application </th>
+                    <th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="Order : activate to sort column ascending" style="width: 189px;text-align:center"> Order </th>
+                    <th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="Action : activate to sort column ascending" style="width: 214px;text-align:center"> Action </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="" role="row" ng-repeat="app in applications">
+                    <td>
+                        <div class="">
+                            <span>
+                                <input type="checkbox">
+                            </span>
+                        </div>
+                    </td>
+                    <td class="">
+                        <span class="font-blue-soft">{{app.title}}</span>
+                    </td>
+                    <td class="">{{app.id}}</td>
+                    <td class="">
+                        <a class="btn btn-xs grey-mint btn-outline sbold uppercase" data-toggle="modal" ng-href="#/editor/{{app.title}}"> View </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

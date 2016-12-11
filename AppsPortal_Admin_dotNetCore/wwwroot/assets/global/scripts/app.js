@@ -65,7 +65,7 @@ var App = function() {
         if (isIE8) {
             var currheight;
             $(window).resize(function() {
-                if (currheight == document.documentElement.clientHeight) {
+                if (currheight === document.documentElement.clientHeight) {
                     return; //quite event since only body resized not window.
                 }
                 if (resize) {
@@ -149,14 +149,14 @@ var App = function() {
                     success: function(res) {
                         App.unblockUI(el);
                         el.html(res);
-                        App.initAjax() // reinitialize elements & plugins for newly loaded content
+                        App.initAjax(); // reinitialize elements & plugins for newly loaded content
                     },
                     error: function(xhr, ajaxOptions, thrownError) {
                         App.unblockUI(el);
                         var msg = 'Error on reloading the content. Please check your connection and try again.';
-                        if (error == "toastr" && toastr) {
+                        if (error === "toastr" && toastr) {
                             toastr.error(msg);
-                        } else if (error == "notific8" && $.notific8) {
+                        } else if (error === "notific8" && $.notific8) {
                             $.notific8('zindex', 11500);
                             $.notific8(msg, {
                                 theme: 'ruby',
@@ -213,79 +213,79 @@ var App = function() {
     };
 
     // Handlesmaterial design checkboxes
-    var handleMaterialDesign = function() {
+    var handleMaterialDesign = function () {
 
         // Material design ckeckbox and radio effects
-        $('body').on('click', '.md-checkbox > label, .md-radio > label', function() {
+        $('body').on('click', '.md-checkbox > label, .md-radio > label', function () {
             var the = $(this);
             // find the first span which is our circle/bubble
             var el = $(this).children('span:first-child');
-              
+
             // add the bubble class (we do this so it doesnt show on page load)
             el.addClass('inc');
-              
+
             // clone it
-            var newone = el.clone(true);  
-              
+            var newone = el.clone(true);
+
             // add the cloned version before our original
-            el.before(newone);  
-              
+            el.before(newone);
+
             // remove the original so that it is ready to run on next click
             $("." + el.attr("class") + ":last", the).remove();
-        }); 
+        });
 
-        if ($('body').hasClass('page-md')) { 
+        if ($('body').hasClass('page-md')) {
             // Material design click effect
             // credit where credit's due; http://thecodeplayer.com/walkthrough/ripple-click-effect-google-material-design       
             var element, circle, d, x, y;
-            $('body').on('click', 'a.btn, button.btn, input.btn, label.btn', function(e) { 
+            $('body').on('click', 'a.btn, button.btn, input.btn, label.btn', function (e) {
                 element = $(this);
-      
-                if(element.find(".md-click-circle").length == 0) {
+
+                if (element.find(".md-click-circle").length === 0) {
                     element.prepend("<span class='md-click-circle'></span>");
                 }
-                    
+
                 circle = element.find(".md-click-circle");
                 circle.removeClass("md-click-animate");
-                
-                if(!circle.height() && !circle.width()) {
-                    d = Math.max(element.outerWidth(), element.outerHeight());
-                    circle.css({height: d, width: d});
-                }
-                
-                x = e.pageX - element.offset().left - circle.width()/2;
-                y = e.pageY - element.offset().top - circle.height()/2;
-                
-                circle.css({top: y+'px', left: x+'px'}).addClass("md-click-animate");
 
-                setTimeout(function() {
-                    circle.remove();      
+                if (!circle.height() && !circle.width()) {
+                    d = Math.max(element.outerWidth(), element.outerHeight());
+                    circle.css({ height: d, width: d });
+                }
+
+                x = e.pageX - element.offset().left - circle.width() / 2;
+                y = e.pageY - element.offset().top - circle.height() / 2;
+
+                circle.css({ top: y + 'px', left: x + 'px' }).addClass("md-click-animate");
+
+                setTimeout(function () {
+                    circle.remove();
                 }, 1000);
             });
         }
 
         // Floating labels
-        var handleInput = function(el) {
-            if (el.val() != "") {
+        var handleInput = function (el) {
+            if (el.val() !== "") {
                 el.addClass('edited');
             } else {
                 el.removeClass('edited');
             }
-        } 
+        };
 
-        $('body').on('keydown', '.form-md-floating-label .form-control', function(e) { 
+        $('body').on('keydown', '.form-md-floating-label .form-control', function (e) {
             handleInput($(this));
         });
-        $('body').on('blur', '.form-md-floating-label .form-control', function(e) { 
+        $('body').on('blur', '.form-md-floating-label .form-control', function (e) {
             handleInput($(this));
-        });        
+        });
 
-        $('.form-md-floating-label .form-control').each(function(){
+        $('.form-md-floating-label .form-control').each(function () {
             if ($(this).val().length > 0) {
                 $(this).addClass('edited');
             }
         });
-    }
+    };
 
     // Handles custom checkboxes & radios using jQuery iCheck plugin
     var handleiCheck = function() {
@@ -321,12 +321,12 @@ var App = function() {
     };
 
     // Handles Bootstrap confirmations
-    var handleBootstrapConfirmation = function() {
+    var handleBootstrapConfirmation = function () {
         if (!$().confirmation) {
             return;
         }
-        $('[data-toggle=confirmation]').confirmation({ container: 'body', btnOkClass: 'btn btn-sm btn-success', btnCancelClass: 'btn btn-sm btn-danger'});
-    }
+        $('[data-toggle=confirmation]').confirmation({ container: 'body', btnOkClass: 'btn btn-sm btn-success', btnCancelClass: 'btn btn-sm btn-danger' });
+    };
     
     // Handles Bootstrap Accordions.
     var handleAccordions = function() {
@@ -448,11 +448,11 @@ var App = function() {
     };
 
     // Handle textarea autosize 
-    var handleTextareaAutosize = function() {
-        if (typeof(autosize) == "function") {
+    var handleTextareaAutosize = function () {
+        if (typeof autosize === "function") {
             autosize(document.querySelector('textarea.autosizeme'));
         }
-    }
+    };
 
     // Handles Bootstrap Popovers
 
@@ -522,13 +522,13 @@ var App = function() {
                 }
 
                 input.focus(function() {
-                    if (input.val() == input.attr('placeholder')) {
+                    if (input.val() === input.attr('placeholder')) {
                         input.val('');
                     }
                 });
 
                 input.blur(function() {
-                    if (input.val() === '' || input.val() == input.attr('placeholder')) {
+                    if (input.val() === '' || input.val() === input.attr('placeholder')) {
                         input.val(input.attr('placeholder'));
                     }
                 });
@@ -549,22 +549,22 @@ var App = function() {
     };
 
     // handle group element heights
-   var handleHeight = function() {
-       $('[data-auto-height]').each(function() {
+    var handleHeight = function () {
+        $('[data-auto-height]').each(function () {
             var parent = $(this);
             var items = $('[data-height]', parent);
             var height = 0;
             var mode = parent.attr('data-mode');
             var offset = parseInt(parent.attr('data-offset') ? parent.attr('data-offset') : 0);
 
-            items.each(function() {
-                if ($(this).attr('data-height') == "height") {
+            items.each(function () {
+                if ($(this).attr('data-height') === "height") {
                     $(this).css('height', '');
                 } else {
                     $(this).css('min-height', '');
                 }
 
-                var height_ = (mode == 'base-height' ? $(this).outerHeight() : $(this).outerHeight(true));
+                var height_ = mode === 'base-height' ? $(this).outerHeight() : $(this).outerHeight(true);
                 if (height_ > height) {
                     height = height_;
                 }
@@ -572,19 +572,19 @@ var App = function() {
 
             height = height + offset;
 
-            items.each(function() {
-                if ($(this).attr('data-height') == "height") {
+            items.each(function () {
+                if ($(this).attr('data-height') === "height") {
                     $(this).css('height', height);
                 } else {
                     $(this).css('min-height', height);
                 }
             });
 
-            if(parent.attr('data-related')) {
+            if (parent.attr('data-related')) {
                 $(parent.attr('data-related')).css('height', parent.height());
             }
-       });       
-    }
+        });
+    };
     
     //* END:CORE HANDLERS *//
 
@@ -663,7 +663,7 @@ var App = function() {
 
         // wrApper function to scroll(focus) to an element
         scrollTo: function(el, offeset) {
-            var pos = (el && el.size() > 0) ? el.offset().top : 0;
+            var pos = el && el.size() > 0 ? el.offset().top : 0;
 
             if (el) {
                 if ($('body').hasClass('page-header-fixed')) {
@@ -698,13 +698,13 @@ var App = function() {
                 $(this).slimScroll({
                     allowPageScroll: true, // allow page scroll when the element scroll is ended
                     size: '7px',
-                    color: ($(this).attr("data-handle-color") ? $(this).attr("data-handle-color") : '#bbb'),
-                    wrapperClass: ($(this).attr("data-wrapper-class") ? $(this).attr("data-wrapper-class") : 'slimScrollDiv'),
-                    railColor: ($(this).attr("data-rail-color") ? $(this).attr("data-rail-color") : '#eaeaea'),
+                    color: $(this).attr("data-handle-color") ? $(this).attr("data-handle-color") : '#bbb',
+                    wrapperClass: $(this).attr("data-wrapper-class") ? $(this).attr("data-wrapper-class") : 'slimScrollDiv',
+                    railColor: $(this).attr("data-rail-color") ? $(this).attr("data-rail-color") : '#eaeaea',
                     position: isRTL ? 'left' : 'right',
                     height: height,
-                    alwaysVisible: ($(this).attr("data-always-visible") == "1" ? true : false),
-                    railVisible: ($(this).attr("data-rail-visible") == "1" ? true : false),
+                    alwaysVisible: $(this).attr("data-always-visible") === "1" ? true : false,
+                    railVisible: $(this).attr("data-rail-visible") === "1" ? true : false,
                     disableFadeOut: true
                 });
 
@@ -738,7 +738,7 @@ var App = function() {
                     }
 
                     $(this).slimScroll({
-                        wrapperClass: ($(this).attr("data-wrapper-class") ? $(this).attr("data-wrapper-class") : 'slimScrollDiv'),
+                        wrapperClass: $(this).attr("data-wrapper-class") ? $(this).attr("data-wrapper-class") : 'slimScrollDiv',
                         destroy: true
                     });
 
@@ -774,7 +774,7 @@ var App = function() {
 
             if (options.target) { // element blocking
                 var el = $(options.target);
-                if (el.height() <= ($(window).height())) {
+                if (el.height() <= $(window).height()) {
                     options.cenrerY = true;
                 }
                 el.block({
@@ -874,7 +874,7 @@ var App = function() {
                     }
                 }
             } else {
-                if (options.place == "append") {
+                if (options.place === "append") {
                     $(options.container).append(html);
                 } else {
                     $(options.container).prepend(html);
@@ -934,7 +934,7 @@ var App = function() {
 
             for (i = 0; i < params.length; i++) {
                 val = params[i].split("=");
-                if (val[0] == paramName) {
+                if (val[0] === paramName) {
                     return unescape(val[1]);
                 }
             }
@@ -987,7 +987,7 @@ var App = function() {
 
         // check IE8 mode
         isAngularJsApp: function() {
-            return (typeof angular == 'undefined') ? false : true;
+            return typeof angular === 'undefined' ? false : true;
         },
 
         getAssetsPath: function() {

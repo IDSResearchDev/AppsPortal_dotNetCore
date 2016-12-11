@@ -8,9 +8,9 @@ namespace AppsPortalCore.Model
 {
     public class ProductRepository : IProductRepository
     {
-        private ProductContext _context;
+        private AppsContext _context;
 
-        public ProductRepository(ProductContext context)
+        public ProductRepository(AppsContext context)
         {
             _context = context;
         }

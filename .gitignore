@@ -2,3 +2,14 @@ src/AppsPortal_dotNetCore/obj/
 .vs/config/applicationhost.config
 *.suo
 src/AppsPortal_dotNetCore/bin/Debug/
+.vs/restore.dg
+src/AppsPortal.Repositories/bin/
+src/AppsPortal.Repositories/obj/
+src/AppsPortal_AdminCore/bin/
+src/AppsPortal_AdminCore/obj/
+AppsPortal_Admin_dotNetCore/obj/
+AppsPortal_Admin_dotNetCore/bin/
+AppsPortal_Admin_dotNetCore/project.lock.json
+src/AppsPortal.Repositories/project.lock.json
+src/AppsPortal.Entities/bin/
+src/AppsPortal.Entities/obj/
