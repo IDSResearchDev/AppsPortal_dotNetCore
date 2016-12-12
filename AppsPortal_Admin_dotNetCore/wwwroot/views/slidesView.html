@@ -42,7 +42,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="" role="row" ng-repeat="app in applications">
+                <tr class="" role="row" ng-repeat="slide in slides">
                     <td>
                         <div class="">
                             <span>
@@ -51,11 +51,11 @@
                         </div>
                     </td>
                     <td class="">
-                        <span class="font-blue-soft">{{app.title}}</span>
+                        <span class="font-blue-soft">{{slide.title}}</span>
                     </td>
-                    <td class="">{{app.id}}</td>
+                    <td class="">{{slide.id}}</td>
                     <td class="">
-                        <a class="btn btn-xs grey-mint btn-outline sbold uppercase" data-toggle="modal" ng-href="#/editor/{{app.title}}"> View </a>
+                        <a class="btn btn-xs grey-mint btn-outline sbold uppercase" data-toggle="modal" ng-href="#/editor/{{slide.title}}"> View </a>
                     </td>
                 </tr>
             </tbody>

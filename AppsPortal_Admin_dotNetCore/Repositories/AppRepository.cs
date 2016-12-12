@@ -24,6 +24,14 @@ namespace AppsPortal.Admin.dotNetCore.Repositories
             return data;
         }
 
+        public IEnumerable<Slides> GetAllSlides()
+        {
+            var data = _context.Slides
+                 .OrderBy(o => o.Id).ToList();
+
+            return data;
+        }
+
         //public Task<List<Product>> GetAllProducts()
         //{
         //    var data = _context.Products
@@ -31,7 +39,7 @@ namespace AppsPortal.Admin.dotNetCore.Repositories
 
         //    return data;
         //}
-         
+
 
         public IEnumerable<Apps> GetAllVersionsByApplication()
         {
@@ -53,6 +61,16 @@ namespace AppsPortal.Admin.dotNetCore.Repositories
                 .Include(i => i.ButtonDetails)
                 .Include(f => f.FeedBacks)
                 .Where(a => a.Title == appTitle)
+                .FirstOrDefault();
+
+            return data;
+        }
+
+        public Slides GetSlide(string slideTitle)
+        {
+            var data = _context.Slides
+                .Include(i => i.ButtonDetails)
+                .Where(a => a.Title == slideTitle)
                 .FirstOrDefault();
 
             return data;

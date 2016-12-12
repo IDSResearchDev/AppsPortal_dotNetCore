@@ -51,6 +51,7 @@ namespace AppsPortal.Admin.dotNetCore
             Mapper.Initialize(config =>
             {
                 config.CreateMap<AppsViewModel, Apps>().ReverseMap();
+                config.CreateMap<SlidesViewModel, Slides>().ReverseMap();
             });
             loggerFactory.AddConsole();
 

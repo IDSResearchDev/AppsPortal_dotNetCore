@@ -10,5 +10,8 @@ namespace AppsPortal.Admin.dotNetCore.Repositories
         IEnumerable<Apps> GetAllApplications();
         Apps GetApplication(string appTitle);
 
+        IEnumerable<Slides> GetAllSlides();
+        Slides GetSlide(string slideTitle);
+
     }
 }
